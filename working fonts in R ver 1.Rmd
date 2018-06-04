@@ -1,0 +1,35 @@
+---
+title: "Working Fonts in R"
+output: html_notebook
+---
+
+
+
+```{r}
+
+
+
+library(showtext)
+
+library(extrafont)
+
+ 
+
+library(ggplot2)
+
+p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() +
+  ggtitle("Fuel Efficiency of 32 Cars") +
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+  theme(text=element_text(size=16, family="Montserrat"))
+
+ 
+
+ggsave("font_ggplot2.pdf", plot=p,  width=4, height=4)
+
+
+```
+
+
+
+
+
